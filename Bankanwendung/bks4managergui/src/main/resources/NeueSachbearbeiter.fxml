@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.thkoeln.swp.bks.managergui.control.NeueSachbearbeiterController">
+    <children>
+        <TableView fx:id="adminview" layoutX="17.0" layoutY="269.0" prefHeight="200.0" prefWidth="303.0">
+            <columns>
+                <TableColumn fx:id="IdColumn" prefWidth="75.0" text="Id" />
+                <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Name" />
+                <TableColumn fx:id="vornameColumn" prefWidth="75.0" text="Vorname" />
+                <TableColumn fx:id="abteilungColumn" prefWidth="75.0" text="Abteilung" />
+                <TableColumn fx:id="titelColumn" prefWidth="75.0" text="Titel" />
+
+            </columns>
+        </TableView>
+        <Label fx:id="labelgeschlecht" layoutX="413.0" layoutY="60.0" prefHeight="17.0" prefWidth="72.0" />
+        <Label fx:id="labeldate" layoutX="14.0" layoutY="198.0" />
+        <Label fx:id="labeltitel" layoutX="35.0" layoutY="154.0" />
+        <Label fx:id="labelname" layoutX="42.0" layoutY="65.0" />
+        <Label fx:id="labelsteuerung" layoutX="17.0" layoutY="21.0" prefHeight="17.0" prefWidth="119.0" text="Neu Antrag :" />
+        <SplitMenuButton fx:id="textsteuerung" layoutX="113.0" layoutY="17.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="187.0" text=" Neu Sachbearbeiter">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#resetview" text="Neue Sachbearbeiter" />
+
+                <MenuItem mnemonicParsing="false" onAction="#steuerungloeschen" text="Löschen" />
+                <MenuItem mnemonicParsing="false" onAction="#steuerungbearbeiten" text="Bearbeitung" />
+            </items>
+        </SplitMenuButton>
+        <Label fx:id="labelvorname" layoutX="26.0" layoutY="108.0" />
+        <Label fx:id="labeladresse" layoutX="426.0" layoutY="103.0" prefHeight="17.0" prefWidth="56.0" />
+        <Label fx:id="labeltelefon" layoutX="426.0" layoutY="150.0" prefHeight="17.0" prefWidth="56.0" />
+        <Label layoutX="22.0" layoutY="246.0" prefHeight="17.0" prefWidth="109.0" text="Admin Auswahl :" />
+        <Label fx:id="labelkommentar" layoutX="439.0" layoutY="246.0" prefHeight="17.0" prefWidth="149.0" />
+        <Button fx:id="btnantragstellen" layoutX="537.0" layoutY="429.0" mnemonicParsing="false" onAction="#antragstellen" prefHeight="40.0" prefWidth="174.0" text="Stellen " />
+        <Label fx:id="labelsachbearbeiterid" layoutX="370.0" layoutY="22.0" prefHeight="17.0" prefWidth="109.0" text="Sachbearbeiter ID :" visible="false" />
+        <TextField fx:id="textsachbearbeiterid" layoutX="488.0" layoutY="17.0" visible="false" />
+        <Label fx:id="labeltelefon1" layoutX="415.0" layoutY="196.0" prefHeight="17.0" prefWidth="69.0" />
+    </children>
+</Pane>

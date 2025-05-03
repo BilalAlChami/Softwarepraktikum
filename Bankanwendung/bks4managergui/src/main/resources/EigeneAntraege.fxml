@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.thkoeln.swp.bks.managergui.control.EigeneAntraegeController">
+    <children>
+        <VBox HBox.hgrow="ALWAYS">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Eigene Antraege" wrappingWidth="341.13671875">
+                    <font>
+                        <Font size="30.0" />
+                    </font>
+                </Text>
+                <TableView fx:id="antragTableViewStornieren" accessibleRole="BUTTON" VBox.vgrow="ALWAYS" />
+            </children>
+        </VBox>
+        <Region minWidth="10.0" />
+        <VBox spacing="1.0" prefWidth="163.0">
+            <children>
+                <Region prefHeight="40.0" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Menu" wrappingWidth="109.13671875">
+                    <font>
+                        <Font size="26.0" />
+                    </font>
+                </Text>
+                <Button mnemonicParsing="false" onAction="#menuAntraege" prefHeight="25.0" text="Antraege" />
+                <Region prefHeight="50.0" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Optionen" wrappingWidth="109.13671875">
+                    <font>
+                        <Font size="26.0" />
+                    </font>
+                </Text>
+                <Button mnemonicParsing="false" onAction="#optionenStornieren" prefHeight="25.0" text="Stornieren" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Info: Um einen Antrag zu stornieren einfach das Antrag auswählen und dann die Option &quot;Stornieren&quot; drücken" wrappingWidth="125.13671875" />
+                <Region prefHeight="18.0" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="BKS4" textAlignment="RIGHT" wrappingWidth="98.13671875">
+                    <font>
+                        <Font size="30.0" />
+                    </font>
+                </Text>
+            </children>
+            <HBox.margin>
+                <Insets bottom="1.0" left="1.0" right="6.0" top="1.0" />
+            </HBox.margin>
+        </VBox>
+    </children>
+</HBox>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" spacing="2.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.thkoeln.swp.bks.managergui.control.KontoSperrenController">
+    <padding>
+        <Insets bottom="2.0" left="10.0" right="2.0" top="5.0" />
+    </padding>
+    <Label text="   Konto Sperren" textFill="#dd0e0e">
+        <font>
+            <Font name="System Bold" size="24.0" />
+        </font>
+    </Label>
+    <HBox>
+        <VBox.margin>
+            <Insets left="20.0" right="20.0" top="10.0" />
+        </VBox.margin>
+        <VBox>
+            <Label prefWidth="120.0" text="Konto Daten:">
+                <font>
+                    <Font name="System Bold" size="15.0" />
+                </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="10.0" prefWidth="120.0">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="10.0" prefWidth="120.0" text="ID">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="27.0" prefWidth="120.0" text="Art">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="44.0" prefHeight="20.0" prefWidth="120.0" text="Erstellungsdatum">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="61.0" prefWidth="120.0" text="Stand">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="78.0" prefWidth="120.0" text="Status">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+        </VBox>
+        <Region layoutX="103.0" layoutY="10.0" prefWidth="20.0" />
+        <VBox layoutX="140.0" layoutY="10.0">
+            <Label prefHeight="20.0" prefWidth="120.0">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="10.0" prefWidth="120.0">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Label fx:id="kontoID" layoutX="10.0" layoutY="27.0" prefWidth="120.0" text="-">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Label fx:id="kontoArt" layoutX="10.0" layoutY="44.0" prefWidth="120.0" text="-">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Label fx:id="kontoDatum" layoutX="10.0" layoutY="70.0" prefWidth="120.0" text="-">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Label fx:id="kontoStand" layoutX="10.0" layoutY="90.0" prefWidth="120.0" text="-">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Label fx:id="kontoStatus" layoutX="10.0" layoutY="30.0" prefWidth="120.0" text="-">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+        </VBox>
+        <Region layoutX="226.0" layoutY="10.0" prefWidth="60.0" />
+        <VBox layoutX="270.0" layoutY="10.0">
+            <Label prefWidth="120.0" text="Kunde Daten:">
+                <font>
+                    <Font name="System Bold" size="15.0" />
+                </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="10.0" prefWidth="120.0">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="10.0" prefWidth="120.0" text="ID">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="27.0" prefWidth="120.0" text="Titel">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="44.0" prefHeight="20.0" prefWidth="120.0" text="Name">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="61.0" prefWidth="120.0" text="Vorname">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="78.0" prefWidth="120.0" text="Geb. Datum">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+        </VBox>
+        <Region layoutX="390.0" layoutY="10.0" prefWidth="20.0" />
+        <VBox layoutX="410.0" layoutY="10.0">
+            <Label prefHeight="20.0" prefWidth="110.0">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="10.0" prefWidth="110.0">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Label fx:id="kundeID" layoutX="10.0" layoutY="27.0" prefWidth="110.0" text="-">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Label fx:id="kundeTitel" layoutX="10.0" layoutY="44.0" prefWidth="110.0" text="-">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Label fx:id="kundeName" layoutX="10.0" layoutY="70.0" prefWidth="110.0" text="-">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Label fx:id="kundeVorname" layoutX="10.0" layoutY="90.0" prefWidth="110.0" text="-">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+            <Label fx:id="kundeDatum" layoutX="10.0" layoutY="30.0" prefWidth="110.0" text="-">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+        </VBox>
+    </HBox>
+    <HBox prefHeight="92.0" prefWidth="808.0" spacing="20.0">
+        <VBox.margin>
+            <Insets left="20.0" right="20.0" top="10.0" />
+        </VBox.margin>
+        <VBox />
+        <Label text="Dispo: ">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+            <HBox.margin>
+                <Insets left="150.0" top="30.0" />
+            </HBox.margin>
+        </Label>
+        <TextField fx:id="kontoDispo" prefHeight="25.0" prefWidth="255.0" text="XX.X">
+            <HBox.margin>
+                <Insets top="30.0" />
+            </HBox.margin>
+        </TextField>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="87.0" prefWidth="788.0" spacing="20.0">
+        <Button fx:id="dipositionskreditAendern" layoutX="91.0" layoutY="28.0" mnemonicParsing="false" onAction="#kontoSperren" prefHeight="36.0" prefWidth="206.0" text="Dispo Ändern" textFill="#2200ff">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Button>
+        <Button fx:id="backButton" layoutX="488.0" layoutY="27.0" mnemonicParsing="false" onAction="#backButtonAction" prefHeight="37.0" prefWidth="206.0" text="Stornieren" textAlignment="CENTER" textFill="#2200ff">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Button>
+    </HBox>
+    <Text fill="RED" layoutX="100.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warnung:                        Dispositionskredit auf Null setzen wird das Konto Sperren" textAlignment="CENTER" wrappingWidth="587.4408111572266">
+        <font>
+            <Font name="System Bold" size="15.0" />
+        </font>
+    </Text>
+
+</VBox>

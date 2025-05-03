@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.thkoeln.swp.bks.managergui.control.SuccessFeedbackController">
+    <children>
+        <HBox prefHeight="100.0" prefWidth="200.0">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Alle gewünschten Anträge wurden erfolgreich storniert" textAlignment="CENTER" wrappingWidth="400.0">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </Text>
+            </children>
+        </HBox>
+        <Button fx:id="okayButton" ellipsisString="" mnemonicParsing="false" onAction="#okayClicked" text="Okay">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+    </children>
+</VBox>

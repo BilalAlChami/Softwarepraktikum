@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>de.thkoeln.swp.bks4</groupId>
+    <artifactId>sachbearbeiterdaten</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <packaging>jar</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- <skipTests>true</skipTests> -->
+        <src.dir>src/main/java</src.dir>
+        <test.dir>src/test/java</test.dir>
+        <bksNr>4</bksNr>
+    </properties>
+
+
+    <!-- Konfiguration des Maven-Repositories auf Gitlab -->
+    <repositories>
+        <repository>
+            <id>gitlab-maven</id>
+            <url>https://gitlab.nt.fh-koeln.de/gitlab/api/v4/groups/8973/-/packages/maven</url>
+        </repository>
+    </repositories>
+    <distributionManagement>
+        <repository>
+            <id>gitlab-maven</id>
+            <url>${CI_API_V4_URL}/projects/${env.CI_PROJECT_ID}/packages/maven</url>
+        </repository>
+        <snapshotRepository>
+            <id>gitlab-maven</id>
+            <url>${CI_API_V4_URL}/projects/${env.CI_PROJECT_ID}/packages/maven</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <build>
+        <plugins>
+
+            <!-- Plugin zum Compilieren -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>21</source>
+                    <target>21</target>
+                </configuration>
+            </plugin>
+
+            <!-- Plugin zum Erstellen in einer JAR-Datei -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <archive>
+                        <addMavenDescriptor>false</addMavenDescriptor>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+
+        <!-- JUnit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+
+        <!-- Komponente BKSDBModel -->
+        <dependency>
+            <groupId>de.thkoeln.swp.bks${bksNr}</groupId>
+            <artifactId>bksdbmodel</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- Komponente DatenhaltungAPI -->
+        <dependency>
+            <groupId>de.thkoeln.swp.bks</groupId>
+            <artifactId>datenhaltungapi</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+</project>
+
